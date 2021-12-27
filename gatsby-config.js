@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Bosung's test blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Choi Bosung`,
+      summary: `who lives in Korea building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
