@@ -1,5 +1,23 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
+
+const Test = styled.div`
+  &:hover {
+    background-color: black;
+  }
+`
+
+const H1test = styled.h1`
+  font-size: 2.986rem;
+  margin: 0;
+  box-sizing : border-box;
+  border : 1px solid transparent;
+
+  &:hover {
+    border : 1px solid black;
+  }
+`
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -8,9 +26,9 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
+      <H1test>
         <Link to="/">{title}</Link>
-      </h1>
+      </H1test>
     )
   } else {
     header = (
