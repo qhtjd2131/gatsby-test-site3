@@ -19,6 +19,12 @@ const H1test = styled.h1`
   }
 `
 
+const Test2 = styled.div`
+  width : 100px;
+  height : 100px;
+  background-color : blueviolet;
+`;
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -42,6 +48,7 @@ const Layout = ({ location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
+      <Test2 />
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
