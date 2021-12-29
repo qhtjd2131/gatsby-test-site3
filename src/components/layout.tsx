@@ -2,11 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const Test = styled.div`
-  &:hover {
-    background-color: black;
-  }
-`
+
 
 const H1test = styled.h1`
   font-size: 2.986rem;
@@ -25,10 +21,17 @@ const Test2 = styled.div`
   background-color : blueviolet;
 `;
 
-const Layout = ({ location, title, children }) => {
+interface ILayout {
+  location : any,
+  title : any,
+  children : any,
+}
+
+const Layout = ({ location, title, children }:ILayout) => {
+  // @ts-ignore
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  let header
+  let header : any
 
   if (isRootPath) {
     header = (
@@ -38,9 +41,11 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
+      <H1test>
       <Link className="header-link-home" to="/">
         {title}
       </Link>
+      </H1test>
     )
   }
 

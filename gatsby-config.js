@@ -3,7 +3,7 @@ module.exports = {
     title: `Bosung's test blog`,
     author: {
       name: `Choi Bosung`,
-      summary: `who lives in Korea building useful things.`,
+      summary: `who lives in Korea`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
@@ -12,6 +12,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     {
